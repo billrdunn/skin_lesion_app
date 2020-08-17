@@ -12,66 +12,66 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/lemon"
-        android:text="My Library"
+        android:text="Skin lesion app"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
 
     <Button
-        android:id="@+id/btnAllBooks"
+        android:id="@+id/btnSeeAllImages"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="See all books"
+        android:text="See all images"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
     <Button
-        android:id="@+id/btnCurrentlyReading"
+        android:id="@+id/btnPreviousImage"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Currently reading"
+        android:text="See previous image"
         android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/btnAllBooks"
-        app:layout_constraintStart_toStartOf="@+id/btnAllBooks"
-        app:layout_constraintTop_toBottomOf="@+id/btnAllBooks" />
+        app:layout_constraintEnd_toEndOf="@+id/btnSeeAllImages"
+        app:layout_constraintStart_toStartOf="@+id/btnSeeAllImages"
+        app:layout_constraintTop_toBottomOf="@+id/btnSeeAllImages" />
 
     <Button
-        android:id="@+id/btnAlreadyRead"
+        android:id="@+id/btnSeeInsights"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Already read"
+        android:text="See insights"
         android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/btnCurrentlyReading"
-        app:layout_constraintStart_toStartOf="@+id/btnCurrentlyReading"
-        app:layout_constraintTop_toBottomOf="@+id/btnCurrentlyReading" />
+        app:layout_constraintEnd_toEndOf="@+id/btnPreviousImage"
+        app:layout_constraintStart_toStartOf="@+id/btnPreviousImage"
+        app:layout_constraintTop_toBottomOf="@+id/btnPreviousImage" />
 
     <Button
-        android:id="@+id/btnWantToRead"
+        android:id="@+id/btnExplainClassification"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Your wishlist"
+        android:text="Instructions"
         android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/btnAlreadyRead"
-        app:layout_constraintStart_toStartOf="@+id/btnAlreadyRead"
-        app:layout_constraintTop_toBottomOf="@+id/btnAlreadyRead" />
+        app:layout_constraintEnd_toEndOf="@+id/btnSeeInsights"
+        app:layout_constraintStart_toStartOf="@+id/btnSeeInsights"
+        app:layout_constraintTop_toBottomOf="@+id/btnSeeInsights" />
 
     <Button
-        android:id="@+id/btnFavourites"
+        android:id="@+id/btnLearnMore"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="See favourites"
+        android:text="Learn more"
         android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/btnWantToRead"
-        app:layout_constraintStart_toStartOf="@+id/btnWantToRead"
-        app:layout_constraintTop_toBottomOf="@+id/btnWantToRead" />
+        app:layout_constraintEnd_toEndOf="@+id/btnExplainClassification"
+        app:layout_constraintStart_toStartOf="@+id/btnExplainClassification"
+        app:layout_constraintTop_toBottomOf="@+id/btnExplainClassification" />
 
     <Button
         android:id="@+id/btnAbout"
@@ -80,9 +80,9 @@
         android:layout_marginTop="10dp"
         android:text="About"
         android:textAllCaps="true"
-        app:layout_constraintEnd_toEndOf="@+id/btnFavourites"
-        app:layout_constraintStart_toStartOf="@+id/btnFavourites"
-        app:layout_constraintTop_toBottomOf="@+id/btnFavourites" />
+        app:layout_constraintEnd_toEndOf="@+id/btnLearnMore"
+        app:layout_constraintStart_toStartOf="@+id/btnLearnMore"
+        app:layout_constraintTop_toBottomOf="@+id/btnLearnMore" />
 
     <ImageView
         android:id="@+id/imgLogo"

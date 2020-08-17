@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookActivity">
+    tools:context=".ImageActivity">
     
     <ScrollView
         android:layout_width="match_parent"
@@ -24,10 +24,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtShortDescription" />
 
             <TextView
-                android:id="@+id/txtNumPages"
+                android:id="@+id/txtPatientId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="#pages"
+                android:text="#patientId"
                 app:layout_constraintBottom_toBottomOf="@+id/textView8"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="@+id/textView8"
@@ -43,51 +43,51 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <TextView
-                android:id="@+id/txtAuthor"
+                android:id="@+id/txtExamination"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Author here"
+                android:text="Type of examination here"
                 app:layout_constraintBottom_toBottomOf="@+id/textView3"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="@+id/textView3"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Button
-                android:id="@+id/btnAddToFavourites"
+                android:id="@+id/btnSeeSimilarImages"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="Add to favourites"
+                android:text="See similar images"
                 android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="@+id/btnAlreadyRead"
-                app:layout_constraintStart_toStartOf="@+id/btnAlreadyRead"
-                app:layout_constraintTop_toBottomOf="@+id/btnAlreadyRead" />
+                app:layout_constraintEnd_toEndOf="@+id/btnSeeInsights"
+                app:layout_constraintStart_toStartOf="@+id/btnSeeInsights"
+                app:layout_constraintTop_toBottomOf="@+id/btnSeeInsights" />
 
             <Button
-                android:id="@+id/btnAlreadyRead"
+                android:id="@+id/btnSeeInsights"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="Already read"
+                android:text="See insights"
                 android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="@+id/btnWantToRead"
+                app:layout_constraintEnd_toEndOf="@+id/btnExplainClassification"
                 app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="@+id/btnWantToRead"
-                app:layout_constraintTop_toBottomOf="@+id/btnWantToRead" />
+                app:layout_constraintStart_toStartOf="@+id/btnExplainClassification"
+                app:layout_constraintTop_toBottomOf="@+id/btnExplainClassification" />
 
             <Button
-                android:id="@+id/btnAddToCurrentlyReading"
+                android:id="@+id/btnClassifyImage"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:text="Add to currently reading"
+                android:text="Classify image"
                 android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/bookImage"
+                android:id="@+id/lesionImage"
                 android:layout_width="150sp"
                 android:layout_height="150sp"
                 android:layout_marginTop="48dp"
@@ -98,30 +98,30 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <Button
-                android:id="@+id/btnWantToRead"
+                android:id="@+id/btnExplainClassification"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Want to read"
+                android:text="Explain classification"
                 android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="@+id/btnAddToCurrentlyReading"
-                app:layout_constraintStart_toStartOf="@+id/btnAddToCurrentlyReading"
-                app:layout_constraintTop_toBottomOf="@+id/btnAddToCurrentlyReading" />
+                app:layout_constraintEnd_toEndOf="@+id/btnClassifyImage"
+                app:layout_constraintStart_toStartOf="@+id/btnClassifyImage"
+                app:layout_constraintTop_toBottomOf="@+id/btnClassifyImage" />
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Book name"
+                android:text="Image classification"
                 app:layout_constraintStart_toStartOf="@+id/guideline3"
                 app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
             <TextView
-                android:id="@+id/txtBookName"
+                android:id="@+id/txtImageClassification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Book name here"
+                android:text="Image classficiation here"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textView9"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -132,7 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Author"
+                android:text="Examination"
                 app:layout_constraintStart_toStartOf="@+id/guideline3"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -141,7 +141,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Pages"
+                android:text="Patient ID"
                 app:layout_constraintStart_toStartOf="@+id/guideline3"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 

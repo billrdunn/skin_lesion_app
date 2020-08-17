@@ -18,18 +18,18 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imgBook"
+                android:id="@+id/imgImage"
                 android:layout_width="200dp"
                 android:layout_height="220dp"
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
-                android:id="@+id/txtBookName"
+                android:id="@+id/txtImageClassification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imgBook"
+                android:layout_below="@+id/imgImage"
                 android:layout_marginTop="7dp"
-                android:text="Book name"
+                android:text="Image name"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_down_arrow"
-                android:layout_below="@id/imgBook"
+                android:layout_below="@id/imgImage"
                 android:layout_marginTop="7dp"
                 android:id="@+id/btnDownArrow"
                 android:layout_alignParentEnd="true"/>
@@ -52,23 +52,23 @@
             android:visibility="gone">
 
             <TextView
-                android:id="@+id/authorText"
+                android:id="@+id/examinationText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Author" />
+                android:text="Examination" />
 
             <TextView
-                android:id="@+id/txtAuthor"
+                android:id="@+id/txtExamination"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/authorText"
+                android:layout_below="@+id/examinationText"
                 android:text="Bill" />
 
             <TextView
                 android:id="@+id/txtShortDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txtAuthor"
+                android:layout_below="@id/txtExamination"
                 android:layout_marginTop="7dp"
                 android:text="Short description" />
 

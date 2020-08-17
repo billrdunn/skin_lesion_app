@@ -1,20 +1,20 @@
-package com.example.mylibrary;
+package com.example.skinlesionapp;
 
-public class Book {
+public class Image {
     private int id;
-    private String name;
-    private String author;
-    private int pageCount;
+    private String classification;
+    private String examination;
+    private int patientId;
     private String imageURL;
     private String shortDesc;
     private String longDesc;
     private boolean isExpanded;
 
-    public Book(int id, String name, String author, int pageCount, String imageURL, String shortDesc, String longDesc) {
+    public Image(int id, String classification, String examination, int patientId, String imageURL, String shortDesc, String longDesc) {
         this.id = id;
-        this.name = name;
-        this.author = author;
-        this.pageCount = pageCount;
+        this.classification = classification;
+        this.examination = examination;
+        this.patientId = patientId;
         this.imageURL = imageURL;
         this.shortDesc = shortDesc;
         this.longDesc = longDesc;
@@ -31,11 +31,11 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "Image{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", author='" + author + '\'' +
-                ", pageCount=" + pageCount +
+                ", classification='" + classification + '\'' +
+                ", examination='" + examination + '\'' +
+                ", patientId=" + patientId +
                 ", imageURL='" + imageURL + '\'' +
                 ", shortDesc='" + shortDesc + '\'' +
                 ", longDesc='" + longDesc + '\'' +
@@ -50,28 +50,28 @@ public class Book {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getClassification() {
+        return classification;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setClassification(String classification) {
+        this.classification = classification;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getExamination() {
+        return examination;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setExamination(String examination) {
+        this.examination = examination;
     }
 
-    public int getPageCount() {
-        return pageCount;
+    public int getPatientId() {
+        return patientId;
     }
 
-    public void setPageCount(int pageCount) {
-        this.pageCount = pageCount;
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
     }
 
     public String getImageURL() {

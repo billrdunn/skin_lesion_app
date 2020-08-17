@@ -1,4 +1,4 @@
-package com.example.mylibrary;
+package com.example.skinlesionapp;
 
 import org.junit.Test;
 

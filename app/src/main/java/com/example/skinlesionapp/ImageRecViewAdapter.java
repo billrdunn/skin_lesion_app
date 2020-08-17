@@ -1,4 +1,4 @@
-package com.example.mylibrary;
+package com.example.skinlesionapp;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,39 +9,37 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.transition.Transition;
 import androidx.transition.TransitionManager;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import static com.example.mylibrary.BookActivity.BOOK_ID_KEY;
+import static com.example.skinlesionapp.ImageActivity.IMAGE_ID_KEY;
 
-public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.ViewHolder> {
-    private static final String TAG = "BookRecViewAdapter";
+public class ImageRecViewAdapter extends RecyclerView.Adapter<ImageRecViewAdapter.ViewHolder> {
+    private static final String TAG = "ImageRecViewAdapter";
 
-    private ArrayList<Book> books = new ArrayList<>();
+    private ArrayList<Image> images = new ArrayList<>();
     private Context mContext;
 
-    public BookRecViewAdapter(Context mContext) {
+    public ImageRecViewAdapter(Context mContext) {
         this.mContext = mContext;
     }
 
-    public void setBooks(ArrayList<Book> books) {
-        this.books = books;
+    public void setImages(ArrayList<Image> images) {
+        this.images = images;
         notifyDataSetChanged();
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_book, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_image, parent, false);
         return new ViewHolder(view);
 
     }
@@ -49,25 +47,25 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Log.d(TAG, "onBindViewHolder: Called");
-        holder.txtName.setText(books.get(position).getName());
+        holder.txtName.setText(images.get(position).getClassification());
         Glide.with(mContext)
                 .asBitmap()
-                .load(books.get(position).getImageURL())
-                .into(holder.imgBook);
+                .load(images.get(position).getImageURL())
+                .into(holder.imgImage);
         
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, BookActivity.class);
-                intent.putExtra(BOOK_ID_KEY, books.get(position).getId());
+                Intent intent = new Intent(mContext, ImageActivity.class);
+                intent.putExtra(IMAGE_ID_KEY, images.get(position).getId());
                 mContext.startActivity(intent);
             }
         });
 
-        holder.txtAuthor.setText(books.get(position).getAuthor());
-        holder.txtShortDescription.setText(books.get(position).getShortDesc());
+        holder.txtExamination.setText(images.get(position).getExamination());
+        holder.txtShortDescription.setText(images.get(position).getShortDesc());
 
-        if (books.get(position).isExpanded()) {
+        if (images.get(position).isExpanded()) {
             TransitionManager.beginDelayedTransition(holder.parent);
             holder.expandedRelLayout.setVisibility(View.VISIBLE);
             holder.downArrow.setVisibility(View.GONE);
@@ -81,33 +79,33 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
 
     @Override
     public int getItemCount() {
-        return books.size();
+        return images.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         private CardView parent;
-        private ImageView imgBook;
+        private ImageView imgImage;
         private TextView txtName;
         private ImageView downArrow, upArrow;
         private RelativeLayout expandedRelLayout;
-        private TextView txtAuthor, txtShortDescription;
+        private TextView txtExamination, txtShortDescription;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             parent = itemView.findViewById(R.id.parent);
-            imgBook = itemView.findViewById(R.id.imgBook);
-            txtName = itemView.findViewById(R.id.txtBookName);
+            imgImage = itemView.findViewById(R.id.imgImage);
+            txtName = itemView.findViewById(R.id.txtImageClassification);
             downArrow = itemView.findViewById(R.id.btnDownArrow);
             upArrow = itemView.findViewById(R.id.btnUpArrow);
             expandedRelLayout = itemView.findViewById(R.id.expandedRelLayout);
-            txtAuthor = itemView.findViewById(R.id.txtAuthor);
+            txtExamination = itemView.findViewById(R.id.txtExamination);
             txtShortDescription = itemView.findViewById(R.id.txtShortDescription);
 
             downArrow.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Book book = books.get(getAdapterPosition());
-                    book.setExpanded(!book.isExpanded());
+                    Image image = images.get(getAdapterPosition());
+                    image.setExpanded(!image.isExpanded());
                     notifyItemChanged(getAdapterPosition());
                 }
             });
@@ -115,8 +113,8 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
             upArrow.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Book book = books.get(getAdapterPosition());
-                    book.setExpanded(!book.isExpanded());
+                    Image image = images.get(getAdapterPosition());
+                    image.setExpanded(!image.isExpanded());
                     notifyItemChanged(getAdapterPosition());
                 }
             });
